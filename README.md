@@ -26,5 +26,5 @@ Para ejecutar la aplicación dockerizada es necesario seguir los siguientes paso
 </ol>
 
 Referencias: </br>
-Codigo basado de: 
+Codigo basado de: </br>
 https://www.ibm.com/developerworks/community/blogs/2f9ef931-1ac3-4d9b-a8ca-6e3f01b13889/entry/Containarize_a_Python_Flask_web_application_with_MySQL_using_Docker_Compose?lang=en
