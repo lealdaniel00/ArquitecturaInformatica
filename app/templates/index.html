@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Universidad</title>
+</head>
+<body>
+<hr/>
+<div align="right">
+	<h4> Elaborado por: Daniel David Leal Lara </h4>
+	<h4> Cod: 20202495012 </h4>
+</div>
+{% for example in get_flashed_messages() %}
+    {{ message }}
+{% endfor %}
+
+<h2 align="center">Directorio privado</h2>
+<p> En el presente directorio, usted puede evidenciar las operaciones basicas del CRUD en un ejemplo 
+de un directorio utilizando dos capas (La aplicación y la Base de datos) montados en un Docker</p>
+<table border="2" style="margin: 0 auto;">
+    <tr>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Ciudad</th>
+        <th>Eliminar</th>
+        <th>Actualizar</th>
+    </tr>
+    {% for address in addresses %}
+    <tr>
+        <td>{{ address.name }}</td>
+        <td>{{ address.addr }}</td>
+        <td>{{ address.city }}</td>
+        <td><a href="/delete_addr?id={{ address.id }}">Eliminar</a></td>
+        <td><a href="/show_update?id={{ address.id }}">Actualizar</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<div align="center">
+ <a href="/show_new" text-align= "center">Añadir nuevo</a>
+</div>
+</body>
+</html>
